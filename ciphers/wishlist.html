@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        nav {
+            color: blue;
+            font-family: 'Verdana', sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222222;
+            height: 20%;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+            width: 50%;
+        }
+
+        .search-bar {
+            padding: 6px 10px;
+            width: 40%;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            font-size: 1.2rem;
+        }
+
+        .search-btn {
+            padding: 5px 10px;
+            margin-left: 10px;
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .search-btn:hover {
+            background-color: #e68900;
+        }
+        h1 {
+            text-align: center;
+        }
+        #wishlist-items {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .wishlist-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .wishlist-item img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .wishlist-item span {
+            font-size: 16px;
+        }
+        .remove-item {
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .remove-item:hover {
+            background-color: #c82333;
+        }
+        #wishlist-total {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="collections.html">Collections</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search Item" class="search-bar">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="nav-icons">
+            <a href="wishlist.html" title="Wishlist">
+                <img src="heart.png" alt="Wishlist" style="width: 30px; height: 30px; margin-right: 10px;">
+            </a>
+            <a href="addtocart.html" title="Cart">
+                <img src="carts.png" alt="Cart" style="width: 30px; height: 30px;">
+            </a>
+            <a href="login.html" class="login-btn" style="margin-left: 20px;">Login</a>
+        </div>
+    </nav>
+    <h1>Your Wishlist</h1>
+    <div id="wishlist-items"></div>
+
+    <script>
+        const wishlistItemsContainer = document.getElementById('wishlist-items');
+
+        // Retrieve wishlist from localStorage
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        let wishlistTotal = 0;
+
+        // Display wishlist items with images
+        wishlist.forEach((item, index) => {
+            const wishlistItem = document.createElement('div');
+            wishlistItem.classList.add('wishlist-item');
+
+            // Create an img element for the product image
+            const itemImage = document.createElement('img');
+            itemImage.src = item.image;  // Use the stored image URL
+            itemImage.alt = item.name;
+
+            const itemInfo = document.createElement('span');
+            itemInfo.textContent = `${item.name} - $${item.price}`;
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.classList.add('remove-item');
+            removeButton.addEventListener('click', () => {
+                removeWishlistItem(index);
+            });
+
+            wishlistItem.appendChild(itemImage);
+            wishlistItem.appendChild(itemInfo);
+            wishlistItem.appendChild(removeButton);
+            wishlistItemsContainer.appendChild(wishlistItem);
+
+            wishlistTotal += parseFloat(item.price);
+        });
+
+        // Remove item from wishlist
+        function removeWishlistItem(index) {
+            wishlist.splice(index, 1);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            location.reload(); // Refresh the wishlist page to update the list
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f0efe9;
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            color: blue;
+            font-family: 'Verdana', sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222222;
+            height: 20%;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+            width: 50%;
+        }
+
+        .search-bar {
+            padding: 6px 10px;
+            width: 40%;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            font-size: 1.2rem;
+        }
+
+        .search-btn {
+            padding: 5px 10px;
+            margin-left: 10px;
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .search-btn:hover {
+            background-color: #e68900;
+        }
+        header {
+            background: linear-gradient(90deg, #ffafbd, #ffc3a0);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+        section h1, section h2 {
+            color: #ff7f50;
+        }
+        section p {
+            font-size: 1.1em;
+        }
+        .values {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .value {
+            flex: 1 1 calc(33% - 20px);
+            text-align: center;
+            padding: 15px;
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            background-color: #fffcf0;
+        }
+        .value h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #ff6347;
+        }
+        .value p {
+            margin: 0;
+            font-size: 1em;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            margin-top: 30px;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="collections.html">Collections</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search Item" class="search-bar">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="nav-icons">
+            <a href="wishlist.html" title="Wishlist">
+                <img src="heart.png" alt="Wishlist" style="width: 30px; height: 30px; margin-right: 10px;">
+            </a>
+            <a href="addtocart.html" title="Cart">
+                <img src="carts.png" alt="Cart" style="width: 30px; height: 30px;">
+            </a>
+            <a href="login.html" class="login-btn" style="margin-left: 20px;">Login</a>
+        </div>
+    </nav>
+<header>
+    <h1>About Us</h1>
+</header>
+
+<section>
+    <h1>Welcome to Our Clothing Store!</h1>
+    <p>At our store, we are dedicated to bringing you the latest in fashion trends and timeless classics. Our goal is to provide high-quality, stylish, and affordable clothing for people of all ages. From everyday essentials to special occasion outfits, we have something for everyone.</p>
+
+    <h2>Our Mission</h2>
+    <p>Our mission is to revolutionize the way you experience fashion by combining sustainability, innovation, and timeless designs. We believe in empowering our customers through style while ensuring a positive impact on the environment.</p>
+
+    <h2>Our Values</h2>
+    <div class="values">
+        <div class="value">
+            <h3>Quality</h3>
+            <p>We prioritize top-notch materials and craftsmanship to bring you exceptional products.</p>
+        </div>
+        <div class="value">
+            <h3>Sustainability</h3>
+            <p>We are committed to reducing our environmental footprint with eco-friendly practices.</p>
+        </div>
+        <div class="value">
+            <h3>Customer First</h3>
+            <p>Your satisfaction is our priority, and we strive to exceed your expectations.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Our Clothing Store. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Wear</title>
+    <style>
+        body {
+            background: url('back1.jpg') no-repeat center center fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            color: blue;
+            font-family: 'Verdana', sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222222;
+            height: 20%;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+            width: 50%;
+        }
+
+        .search-bar {
+            padding: 6px 10px;
+            width: 40%;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            font-size: 1.2rem;
+        }
+
+        .search-btn {
+            padding: 5px 10px;
+            margin-left: 10px;
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .search-btn:hover {
+            background-color: #e68900;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        button.add-to-wishlist {
+            padding: 10px 15px;
+            border: none;
+            background-color: #ffc107;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button.add-to-wishlist:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="collections.html">Collections</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search Item" class="search-bar">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="nav-icons">
+            <a href="wishlist.html" title="Wishlist">
+                <img src="heart.png" alt="Wishlist" style="width: 30px; height: 30px; margin-right: 10px;">
+            </a>
+            <a href="addtocart.html" title="Cart">
+                <img src="carts.png" alt="Cart" style="width: 30px; height: 30px;">
+            </a>
+            <a href="login.html" class="login-btn" style="margin-left: 20px;">Login</a>
+        </div>
+    </nav>
+    
+    <h1>Women's Wear</h1>
+    <div class="product-container">
+        <!-- Product List -->
+        <div class="product" data-name="Summer Dress" data-price="39.99">
+            <img src="dress.jpg" alt="Summer Dress">
+            <h3>Summer Dress</h3>
+            <p>Price: $39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Evening Gown" data-price="79.99">
+            <img src="gown.jpg" alt="Evening Gown">
+            <h3>Evening Gown</h3>
+            <p>Price: $79.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Saree" data-price="29.99">
+            <img src="Saree.jpg" alt="Saree">
+            <h3>Saree</h3>
+            <p>Price: $29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Maxi Skirt" data-price="49.99">
+            <img src="skirt.jpg" alt="Maxi Skirt">
+            <h3>Maxi Skirt</h3>
+            <p>Price: $49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Jeans" data-price="59.99">
+            <img src="gjeans.jpg" alt="Jeans">
+            <h3>Jeans</h3>
+            <p>Price: $59.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="T-shirt" data-price="19.99">
+            <img src="gtshirt.jpg" alt="T-shirt">
+            <h3>T-shirt</h3>
+            <p>Price: $19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Leather Jacket" data-price="99.99">
+            <img src="gjacket.jpg" alt="Leather Jacket">
+            <h3>Leather Jacket</h3>
+            <p>Price: $99.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Cardigan" data-price="49.99">
+            <img src="cardigan.jpg" alt="Cardigan">
+            <h3>Cardigan</h3>
+            <p>Price: $49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Heels" data-price="79.99">
+            <img src="heels.jpg" alt="Heels">
+            <h3>Heels</h3>
+            <p>Price: $79.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Sneakers" data-price="69.99">
+            <img src="gsneakers.jpg" alt="Sneakers">
+            <h3>Sneakers</h3>
+            <p>Price: $69.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Hoodie" data-price="39.99">
+            <img src="ghoodie.jpg" alt="Hoodie">
+            <h3>Hoodie</h3>
+            <p>Price: $39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Scarf" data-price="14.99">
+            <img src="gscarf.jpg" alt="Scarf">
+            <h3>Scarf</h3>
+            <p>Price: $14.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Boots" data-price="99.99">
+            <img src="gboots.jpg" alt="Boots">
+            <h3>Boots</h3>
+            <p>Price: $99.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Hat" data-price="24.99">
+            <img src="hat.jpg" alt="Hat">
+            <h3>Hat</h3>
+            <p>Price: $24.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Sunglasses" data-price="29.99">
+            <img src="gsunglasses.jpg" alt="Sunglasses">
+            <h3>Sunglasses</h3>
+            <p>Price: $29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Necklace" data-price="39.99">
+            <img src="necklace.jpg" alt="Necklace">
+            <h3>Necklace</h3>
+            <p>Price: $39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Tote Bag" data-price="49.99">
+            <img src="totebag.jpg" alt="Tote Bag">
+            <h3>Tote Bag</h3>
+            <p>Price: $49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Earrings" data-price="19.99">
+            <img src="earring.jpg" alt="Earrings">
+            <h3>Earrings</h3>
+            <p>Price: $19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Bracelet" data-price="29.99">
+            <img src="bracelet.jpg" alt="Bracelet">
+            <h3>Bracelet</h3>
+            <p>Price: $29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+        <div class="product" data-name="Watch" data-price="99.99">
+            <img src="gwatch.jpg" alt="Watch">
+            <h3>Watch</h3>
+            <p>Price: $99.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist">Add to Wishlist</button>
+        </div>
+    </div>
+
+    <script>
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const addToWishlistButtons = document.querySelectorAll('.add-to-wishlist');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const product = button.parentElement;
+                const productName = product.dataset.name;
+                const productPrice = product.dataset.price;
+                const productImage = product.querySelector('img').src;
+
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({ name: productName, price: productPrice, image: productImage });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert(`${productName} added to cart.`);
+            });
+        });
+
+        addToWishlistButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const product = button.parentElement;
+                const productName = product.dataset.name;
+                const productPrice = product.dataset.price;
+                const productImage = product.querySelector('img').src;
+
+                const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+                wishlist.push({ name: productName, price: productPrice, image: productImage });
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                alert(`${productName} added to wishlist.`);
+            });
+        });
+    // Select elements
+    const searchBar = document.querySelector('.search-bar');
+    const searchBtn = document.querySelector('.search-btn');
+    const products = document.querySelectorAll('.product');
+
+    // Add search functionality
+    searchBtn.addEventListener('click', () => {
+        const searchTerm = searchBar.value.toLowerCase(); // Get the search term in lowercase
+        products.forEach(product => {
+            const productName = product.dataset.name.toLowerCase(); // Get product name in lowercase
+            if (productName.includes(searchTerm)) {
+                product.style.display = 'block'; // Show product if it matches the search term
+            } else {
+                product.style.display = 'none'; // Hide product if it doesn't match
+            }
+        });
+    });
+
+    // Optional: Enable search by pressing Enter
+    searchBar.addEventListener('keyup', event => {
+        if (event.key === 'Enter') {
+            searchBtn.click(); // Trigger search button click on Enter key press
+        }
+    });
+
+    </script>
+</body>
+</html>
